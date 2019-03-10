@@ -1,0 +1,21 @@
+{
+  "name": "sample-vue",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Kristoffer95 <Kristoffer.gonzaga@urios.edu.ph>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cssist": "^1.1.28",
+    "reset.css": "^1.1.3"
+  }
+}

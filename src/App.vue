@@ -1,28 +1,70 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="w-100vw" style="font-family: 'SF Text', sans-serif;">
+    <div class="w-100 h-100vh">
+      sfsddfs
+      <Sign
+      :PrivacyAndTermsData="PrivacyAndTermsData"
+      :inputType="inputType"
+      :siteData="siteData">
+      </Sign>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  components: {},
+  data () {
+    return {
+      siteData: { // continue this...
+        name: 'IDIST',
+        // image: ''  ==> ADD IMAGE HERE
+      },
+      PrivacyAndTermsData: [
+        {
+          checkbox: false,    
+          title: 'IDIST Terms of Use',
+          boxData: 'IDIST Terms of Use wefweoijfweoijowiejfjweoj weofjweoij fowiejfa jafwejoiajfweojfo waejfoiwejfwioj fwoiejfo wiejfowejoewjfoewjfoewjoi wejfowejojfwifj woejfoewjoewjfoe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe wjfoewjfoewj oewjoewjfoewjfoejwfjew ojfweojfoajfwe'
+        },
+        {
+          checkbox: false,
+          title: 'IDIST Pravacy Policy',
+          boxData: 'IDIST Terms of Use wefweoijfweoijowiejfjweoj weofjweoij fowiejfa jafwejoiajfweojfowaejfoiwejfwiojfwo iejfowiejfowe joewjfoe wjfoewjoiwej fowejojfw ifjwoej foewjoewjf oewjfoewjfoew joewjoewj foewjfoejwfjew ojfweojfoajfwe jafwejoiajfweojfowaejfoiwejfwiojfwo iejfowiejfowe joewjfoe wjfoewjoiwej fowejojfw ifjwoej foewjoewjf oewjfoewjfoew joewjoewj foewjfoejwfjew ojfweojfoajfwe jafwejoiajfweojfowaejfoiwejfwiojfwo iejfowiejfowe joewjfoe wjfoewjoiwej fowejojfw ifjwoej foewjoewjf oewjfoewjfoew joewjoewj foewjfoejwfjew'
+        },
+      ],
+      inputType: [
+        {
+          type: 'email',
+          placeholder: 'Email',
+          name: 'email',
+          icon: 'email',
+          error: true
+        },
+        {
+          type: 'password',
+          placeholder: 'Password',
+          name: 'password',
+          icon: 'password',
+          error: true
+        },
+        {
+          type: 'text',
+          placeholder: 'Full Name',
+          name: 'fullname',
+          icon: 'user',
+          error: true 
+        },
+        {
+          type: 'mobile',
+          placeholder: 'Phone',
+          name: 'phone',
+          icon: 'phone',
+          error: true
+        }
+      ],
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
